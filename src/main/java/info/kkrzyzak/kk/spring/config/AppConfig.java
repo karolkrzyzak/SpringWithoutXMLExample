@@ -57,7 +57,7 @@ public class AppConfig {
 
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(getDataSource());
-        entityManagerFactory.setPackagesToScan(new String[] { "com.kkrzyzak.kk.model" });
+        entityManagerFactory.setPackagesToScan(new String[] { "info.kkrzyzak.kk.model" });
         entityManagerFactory.setPersistenceProvider(new HibernatePersistence());
         entityManagerFactory.afterPropertiesSet();
         return entityManagerFactory.getObject();
@@ -96,7 +96,7 @@ public class AppConfig {
         LocalSessionFactoryBean annotationSessionFactoryBean = new LocalSessionFactoryBean();
         annotationSessionFactoryBean.setDataSource(getDataSource());
         annotationSessionFactoryBean.setHibernateProperties(getHibernateProperties());
-        annotationSessionFactoryBean.setPackagesToScan(new String[]{"com.kkrzyzak.kk.model"});
+        annotationSessionFactoryBean.setPackagesToScan(new String[]{"info.kkrzyzak.kk.model"});
         return annotationSessionFactoryBean;
     }
 
